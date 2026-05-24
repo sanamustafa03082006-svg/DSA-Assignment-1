@@ -143,7 +143,7 @@ int stringToInt(string str)
 
     return num;
 }
-
+// converting infix expression to postfix
 string infixToPostfix(string exp)
 {
     StackChar st;
@@ -176,7 +176,7 @@ string infixToPostfix(string exp)
             lastWasOpening = false;
         }
 
-        // Variable
+        
         else if (isLetter(ch) || ch == '_')
         {
             while (isLetter(exp[i]) ||
@@ -194,7 +194,7 @@ string infixToPostfix(string exp)
             lastWasOpening = false;
         }
 
-        // Opening bracket
+        
         else if (isOpening(ch))
         {
             st.push(ch);
@@ -203,7 +203,7 @@ string infixToPostfix(string exp)
             lastWasOpening = true;
         }
 
-        // Closing bracket
+
         else if (isClosing(ch))
         {
             if (lastWasOpening)
@@ -238,7 +238,7 @@ string infixToPostfix(string exp)
             lastWasOpening = false;
         }
 
-        // Operator
+        
         else if (isOperator(ch))
         {
             if (lastWasOperator)

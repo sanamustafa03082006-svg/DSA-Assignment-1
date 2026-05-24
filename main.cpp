@@ -292,7 +292,7 @@ string infixToPostfix(string exp)
 
     return postfix;
 }
-
+//value
 int getVariableValue(string varNames[],
     int values[],
     int& count,
